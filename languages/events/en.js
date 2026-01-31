@@ -36,5 +36,41 @@ module.exports = {
 			multiple1: "أنت",
 			multiple2: "أنتم"
 		}
+	},
+	restart: {
+		text: {
+			restartting: "✅ | تم إعادة تشغيل البوت\n⏰ | الوقت: %1s"
+		}
+	},
+	ping: {
+		text: {
+			pong: "🏓 | البوت يعمل! الوقت: %1ms"
+		}
+	},
+	admin: {
+		text: {
+			onlyAdmin: "❌ | هذا الأمر يخص المشرفين فقط",
+			youNotAdmin: "❌ | أنت لست مشرفاً في هذه المجموعة"
+		}
+	},
+	error: {
+		text: {
+			somethingWrong: "❌ | حدث خطأ، حاول مرة أخرى لاحقاً"
+		}
+	},
+	help: {
+		text: {
+			title: "قائمة الأوامر المتاحة:",
+			command: "%1 - %2",
+			footer: "تمت الترجمة للعربية"
+		}
+	},
+	other: {
+		text: {
+			yes: "نعم",
+			no: "لا",
+			success: "✅ | تم بنجاح",
+			failed: "❌ | فشل التنفيذ"
+		}
 	}
 };
