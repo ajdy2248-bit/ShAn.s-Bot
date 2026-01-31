@@ -8,34 +8,40 @@ module.exports = {
 		countDown: 5,
 		role: 0,
 		description: {
-			vi: "Cài đặt ngôn ngữ của bot cho nhóm chat hiện tại hoặc tất cả các nhóm chat",
-			en: "Set default language of bot for current chat or all chats"
+			vi: "تعيين لغة البوت للمحادثة الحالية أو لجميع المحادثات",
+			en: "تعيين اللغة الافتراضية للبوت للمحادثة الحالية أو لجميع المحادثات"
 		},
 		category: "owner",
 		guide: {
-			vi: "   {pn} <language code ISO 639-1"
-				+ "\n   Ví dụ:"
+			vi: "   {pn} <رمز اللغة ISO 639-1"
+				+ "\n   مثال:"
 				+ "\n    {pn} en"
-				+ "\n    {pn} vi",
-			en: "\n   {pn} <language code ISO 639-1"
-				+ "\n   Example:"
+				+ "\n    {pn} ar",
+			en: "\n   {pn} <رمز اللغة ISO 639-1"
+				+ "\n   مثال:"
 				+ "\n    {pn} en"
-				+ "\n    {pn} vi"
+				+ "\n    {pn} ar"
 		}
 	},
 
 	langs: {
 		vi: {
-			setLangForAll: "Đã cài đặt ngôn ngữ mặc định cho bot là: %1",
-			setLangForCurrent: "Đã cài đặt ngôn ngữ mặc định cho nhóm chat này là: %1",
-			noPermission: "Chỉ admin bot mới có thể sử dụng lệnh này",
-			langNotFound: "Không tìm thấy ngôn ngữ: %1"
+			setLangForAll: "تم تعيين اللغة الافتراضية للبوت إلى: %1",
+			setLangForCurrent: "تم تعيين اللغة الافتراضية لهذه المحادثة إلى: %1",
+			noPermission: "فقط مشرف البوت يمكنه استخدام هذا الأمر",
+			langNotFound: "لا يمكن العثور على اللغة: %1"
 		},
 		en: {
-			setLangForAll: "Set default language of bot to: %1",
-			setLangForCurrent: "Set default language for current chat: %1",
-			noPermission: "Only bot admin can use this command",
-			langNotFound: "Can't find language: %1"
+			setLangForAll: "تم تعيين اللغة الافتراضية للبوت إلى: %1",
+			setLangForCurrent: "تم تعيين اللغة الافتراضية لهذه المحادثة إلى: %1",
+			noPermission: "فقط مشرف البوت يمكنه استخدام هذا الأمر",
+			langNotFound: "لا يمكن العثور على اللغة: %1"
+		},
+		ar: {
+			setLangForAll: "تم تعيين اللغة الافتراضية للبوت إلى: %1",
+			setLangForCurrent: "تم تعيين اللغة الافتراضية لهذه المحادثة إلى: %1",
+			noPermission: "فقط مشرف البوت يمكنه استخدام هذا الأمر",
+			langNotFound: "لا يمكن العثور على اللغة: %1"
 		}
 	},
 
@@ -75,6 +81,6 @@ module.exports = {
 		}
 
 		await threadsData.set(event.threadID, langCode, "data.lang");
-		return message.reply((global.GoatBot.commands.get("setlang")?.langs[langCode]?.setLangForCurrent || "Set default language for current chat: %1").replace("%1", langCode));
+		return message.reply((global.GoatBot.commands.get("setlang")?.langs[langCode]?.setLangForCurrent || "تم تعيين اللغة الافتراضية لهذه المحادثة إلى: %1").replace("%1", langCode));
 	}
 };
